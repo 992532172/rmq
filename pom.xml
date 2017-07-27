@@ -20,6 +20,12 @@
                 <package.target>prod</package.target>
             </properties>
         </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <package.target>test</package.target>
+            </properties>
+        </profile>
     </profiles>
 
     <dependencies>
@@ -80,7 +86,7 @@
                             <outputDirectory>${project.build.directory}/classes</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>Config/${package.target}</directory>
+                                    <directory>conf/${package.target}</directory>
                                     <filtering>true</filtering>
                                 </resource>
                             </resources>
