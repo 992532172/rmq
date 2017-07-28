@@ -13,11 +13,8 @@ import org.springframework.stereotype.Component;
 public class TestQueueListener {
     private Logger logger = LoggerFactory.getLogger(TestQueueListener.class);
 
-    public void onMessage(String message) {
-        try {
-            logger.info(message.toString());
-        } catch (Exception e) {
-            logger.error("", e);
-        }
+    public void onMessage(String message) throws Exception {
+        logger.info(message);
+        throw new Exception();
     }
 }

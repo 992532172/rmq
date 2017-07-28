@@ -58,7 +58,7 @@
     method：接收到消息后执行的方法
     queue-names：监听的队列
     -->
-    <!--<rabbit:listener-container connection-factory="connectionFactory" concurrency="10">
+    <rabbit:listener-container connection-factory="connectionFactory" concurrency="10">
         <rabbit:listener ref="testQueueListenter" method="onMessage" queue-names="${rmq.queue.name}"/>
-    </rabbit:listener-container>-->
+    </rabbit:listener-container>
 </beans>
